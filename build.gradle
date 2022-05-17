@@ -1,0 +1,18 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(platform('org.junit:junit-bom:5.8.2'))
+    testImplementation('org.junit.jupiter:junit-jupiter')
+    testImplementation 'org.mockito:mockito-core:4.5.1'
+    testImplementation "ch.qos.logback:logback-classic:1.2.11"
+
+    implementation 'org.slf4j:slf4j-api:1.7.25'
+}
+
+test {
+    useJUnitPlatform()
+}
